@@ -1,0 +1,18 @@
+PROCEDURE addnol
+
+	 LPARAMETER FKG
+	 
+	 CFRET = ''
+
+	 DO CASE 
+	 CASE LEN(ALLTRIM(FKG)) = 5
+	    CFRET = '00'
+	 CASE LEN(ALLTRIM(FKG)) = 6
+	    CFRET = '0'
+	 CASE LEN(ALLTRIM(FKG)) = 7
+	    CFRET = ''
+	 ENDCASE 
+
+	 RETURN CFRET
+
+ENDPROC

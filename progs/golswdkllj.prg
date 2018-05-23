@@ -1,0 +1,39 @@
+lParameter clJenisKend, besarcc, lcPlat, clGuna, lckdjrm
+local golswd
+
+Do Case
+Case clGuna = '6' Or clGuna = '7' Or clGuna = '8' Or (clJenisKend = 'R' And besarcc <= 50) OR (clJenisKend = 'R3' And besarcc <= 50)
+	*penggunaaan utk ambulan, jenajah, pemadam kebakaran, spdm <=50
+	golswd = 'A'
+Case clJenisKend = 'H'
+	*alb
+	golswd = 'B'
+Case ( clJenisKend = 'R' And Between(besarcc,51,250) ) OR ( clJenisKend = 'R3' And Between(besarcc,51,250) )
+	*spd 50 < besarcc <= 250
+	golswd = 'C1'
+Case ( clJenisKend = 'R' And besarcc > 250 ) OR ( clJenisKend = 'R3' And besarcc > 250 )
+	*spd besarcc > 250
+	golswd = 'C2'
+Case (clJenisKend = 'F' And besarcc <= 2400) Or ;
+	 ((clJenisKend = 'A' Or clJenisKend = 'B' Or clJenisKend = 'C' ) And lcPlat # 'KUNING')
+	*pc, cc < 2400, sedan,jeep & mb
+	golswd = 'DP'
+Case (clJenisKend = 'A' Or clJenisKend = 'B' Or clJenisKend = 'C') And lcPlat = 'KUNING' And besarcc <= 1600
+	*sedan, jeep, mb & plat umum & cc <=1600
+	golswd = 'DU'
+Case (clJenisKend = 'D' Or clJenisKend = 'E') And lcPlat # 'KUNING'
+	*MC & bus, plat bukan umum
+	golswd = 'EP'
+Case (clJenisKend = 'D' Or clJenisKend = 'E' Or clJenisKend = 'A' Or clJenisKend = 'B' OR clJenisKend = 'C') ;
+	 AND lcPlat = 'KUNING' And besarcc > 1600
+	*mc, bus, sedan, jeep, mb, plat umum, cc > 1600
+	golswd = 'EU'
+Case clJenisKend = 'G' Or (clJenisKend = 'F' And besarcc > 2400)
+	*truk, lt atau pc, cc > 2400
+	golswd = 'F'
+Otherwise
+	*kalo tidak ada kriteria yg memenuhi
+	golswd = lckdjrm
+Endcase
+
+return golswd

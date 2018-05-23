@@ -1,0 +1,48 @@
+PARAMETERS frmDate, todate, toreturn
+
+IF PARAMETERS() < 2
+	MESSAGEBOX('Kurang Parameter',48,'Error')
+	RETURN 
+ENDIF 
+
+&& Parameter toreturn = 'D' = hari, 'M' = bulan, 'Y' = tahun
+
+LOCAL nYears, nMonths, nDays, cAge, tDate, cRet
+
+IF toDate < frmDate
+   tDate   = toDate
+   toDate  = frmDate
+   frmDate = tDate
+ENDIF
+
+nYears  = YEAR(toDate) - YEAR(frmDate)
+nMonths = 0
+
+IF nYears > 2
+   nYears = nYears - 2
+   tDate  = GOMONTH(frmDate, nYears*12)
+ELSE
+   nYears = 0
+   tdate  = frmDate
+ENDIF
+
+DO WHILE .t.
+   tDate = GOMONTH(tDate,1)
+   IF tDate > toDate
+      EXIT
+   ENDIF
+   nMonths = nMonths+1
+ENDDO
+
+ndays = toDate - GOMONTH(tDate,-1)
+
+IF nMonths >= 12
+   nYears  = nYears + INT(nMonths/12)
+   nMonths = MOD(nMonths,12)
+ENDIF
+
+cAge = IIF(nYears>0,ALLTRIM(STR(nYears))+" Tahun ","")+ ;
+       IIF(nMonths>0,ALLTRIM(STR(nMonths))+" Bulan ","")+ ;
+       IIF(nDays>0,ALLTRIM(STR(nDays))+ " Hari","")
+
+RETURN IIF(EMPTY(toreturn),cAge,IIF(toreturn='D',nDays,IIF(toreturn='M',nMonths,nYears)))

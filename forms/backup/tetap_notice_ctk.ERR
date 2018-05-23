@@ -1,0 +1,928 @@
+Form1.BackColor = 255,255,255
+Error in line 53: Syntax error.
+PROCEDURE Form1.Init
+Error in line 6361: Command contains unrecognized phrase/keyword.
+thisformset.form1.cntInput.ckstruk.Value=tstruk
+Error in line 6362: Statement is not in a procedure.
+ENDPROC
+Error in line 6363: Nesting error.
+PROCEDURE Form1.KeyPress
+Error in line 6364: Command contains unrecognized phrase/keyword.
+LPARAMETERS nKeyCode, nShiftAltCtrl
+Error in line 6365: Statement is not in a procedure.
+DO CASE
+Error in line 6367: Statement is not in a procedure.
+CASE NKEYCODE = -1
+Error in line 6369: Statement is not in a procedure.
+IF thisformset.form1.cmd_cetak.Enabled = .T. 
+Error in line 6371: Statement is not in a procedure.
+THISFORM.CMD_CETAK.CLICK()
+Error in line 6373: Statement is not in a procedure.
+ELSE
+Error in line 6374: Statement is not in a procedure.
+MESSAGEBOX("Notice Sudah Tercetak...!!!",0+64)
+Error in line 6375: Statement is not in a procedure.
+ENDIF 			
+Error in line 6376: Statement is not in a procedure.
+CASE NKEYCODE = -2
+Error in line 6379: Statement is not in a procedure.
+THISFORM.CMD_exit.Click()
+Error in line 6382: Statement is not in a procedure.
+ENDCASE
+Error in line 6384: Statement is not in a procedure.
+ENDPROC
+Error in line 6388: Nesting error.
+PROCEDURE Form1.Show
+Error in line 6389: Command contains unrecognized phrase/keyword.
+LPARAMETERS nStyle
+Error in line 6390: Statement is not in a procedure.
+ENDPROC
+Error in line 6407: Nesting error.
+PROCEDURE Form2.cmd_find.Click
+Error in line 6408: Command contains unrecognized phrase/keyword.
+pfCursor = sys(2015)
+Error in line 6409: Statement is not in a procedure.
+lcObject = thisformset.form2.container1
+Error in line 6410: Statement is not in a procedure.
+if lcObject.cmbKriteria.listindex <> 0
+Error in line 6412: Statement is not in a procedure.
+do case 
+Error in line 6413: Statement is not in a procedure.
+case lcObject.cmbKriteria.listindex = 1
+Error in line 6414: Statement is not in a procedure.
+lcKriteria = 'no_dft'
+Error in line 6415: Statement is not in a procedure.
+case lcObject.cmbKriteria.listindex = 2
+Error in line 6416: Statement is not in a procedure.
+lcKriteria = 'dtos(tgl_dft)'
+Error in line 6417: Statement is not in a procedure.
+case lcObject.cmbKriteria.listindex = 3
+Error in line 6418: Statement is not in a procedure.
+lcKriteria = 'jns_dft1'
+Error in line 6419: Statement is not in a procedure.
+endcase
+Error in line 6420: Statement is not in a procedure.
+select no_dft, tgl_dft, jns_dft1, nopol, kohir, jenis, kd_merk, tipe, thn_buat, rangka, mesin, no_bpkb from Pkb_Header  where upper(lcObject.txtKarakter.value) =  upper(substr(&lcKriteria,1,len(alltrim(lcObject.txtKarakter.value))))  and gol_dft = 'U' into cursor &pfCursor
+Error in line 6427: Statement is not in a procedure.
+select &pfCursor
+Error in line 6430: Statement is not in a procedure.
+go top
+Error in line 6431: Statement is not in a procedure.
+lcObject.txtNopol1.value = substr(nopol,1,2)
+Error in line 6432: Statement is not in a procedure.
+lcObject.txtNopol2.value = substr(nopol,3,4)
+Error in line 6433: Statement is not in a procedure.
+lcObject.txtNopol3.value = substr(nopol,7,2)
+Error in line 6434: Statement is not in a procedure.
+lcObject.txtKohir.value = kohir
+Error in line 6435: Statement is not in a procedure.
+lcObject.txtjns.value = jenis
+Error in line 6436: Statement is not in a procedure.
+lcObject.txtKdMerk.value = kd_merk
+Error in line 6437: Statement is not in a procedure.
+lcObject.cmbTipe.value = tipe
+Error in line 6438: Statement is not in a procedure.
+lcObject.txtRangka.value = rangka
+Error in line 6439: Statement is not in a procedure.
+lcObject.txtMesin.value = mesin
+Error in line 6440: Statement is not in a procedure.
+lcObject.txtNo_Bpkb.value = no_bpkb
+Error in line 6441: Statement is not in a procedure.
+lcObject.txtNo_Dft.value = no_dft
+Error in line 6442: Statement is not in a procedure.
+lcObject.txtTgl_Dft.value = tgl_dft
+Error in line 6443: Statement is not in a procedure.
+lcObject.cmbJns_Dft.value = jns_dft1
+Error in line 6444: Statement is not in a procedure.
+select ajenis
+Error in line 6448: Statement is not in a procedure.
+seek(lcObject.txtjns.value)
+Error in line 6449: Statement is not in a procedure.
+if found()
+Error in line 6450: Statement is not in a procedure.
+lcObject.txtJenis.value = ket
+Error in line 6451: Statement is not in a procedure.
+lcObject.txtJenis.DisabledBackColor= 16776960
+Error in line 6452: Statement is not in a procedure.
+ELSE
+Error in line 6453: Statement is not in a procedure.
+lcObject.txtJenis.value = 'Jenis Kendaraan Tak Ada'
+Error in line 6455: Statement is not in a procedure.
+lcObject.txtJenis.DisabledBackColor= 8421631
+Error in line 6456: Statement is not in a procedure.
+endif
+Error in line 6457: Statement is not in a procedure.
+select msmerk
+Error in line 6460: Statement is not in a procedure.
+seek(lcObject.txtKdMerk.value)
+Error in line 6461: Statement is not in a procedure.
+if found()
+Error in line 6462: Statement is not in a procedure.
+lcObject.txtKd_Merk.value = ket
+Error in line 6463: Statement is not in a procedure.
+lcObject.txtKd_Merk.DisabledBackColor= 16776960
+Error in line 6464: Statement is not in a procedure.
+ELSE
+Error in line 6465: Statement is not in a procedure.
+lcObject.txtKd_Merk.value = 'Merk Kendaraan Tak Ada'
+Error in line 6467: Statement is not in a procedure.
+lcObject.txtKd_Merk.DisabledBackColor= 8421631
+Error in line 6468: Statement is not in a procedure.
+endif
+Error in line 6469: Statement is not in a procedure.
+select apkb
+Error in line 6472: Statement is not in a procedure.
+SET ORDER TO pkb
+Error in line 6473: Statement is not in a procedure.
+seek(lcObject.txtjns.value+lcObject.txtKdMerk.value+lcObject.cmbTipe.value)
+Error in line 6474: Statement is not in a procedure.
+if found()
+Error in line 6479: Statement is not in a procedure.
+lcObject.txtTipe.value = ket
+Error in line 6480: Statement is not in a procedure.
+lcObject.txtTipe.DisabledBackColor= 16776960
+Error in line 6481: Statement is not in a procedure.
+ELSE
+Error in line 6482: Statement is not in a procedure.
+lcObject.txtTipe.value = 'Tipe Kendaraan Tak Ada'
+Error in line 6484: Statement is not in a procedure.
+lcObject.txtTipe.DisabledBackColor= 8421631
+Error in line 6485: Statement is not in a procedure.
+endif
+Error in line 6486: Statement is not in a procedure.
+select ajpajak
+Error in line 6489: Statement is not in a procedure.
+seek(lcObject.cmbJns_Dft.value)
+Error in line 6490: Statement is not in a procedure.
+if found()
+Error in line 6491: Statement is not in a procedure.
+lcObject.txtJns_Dft.value = ket
+Error in line 6492: Statement is not in a procedure.
+endif
+Error in line 6493: Statement is not in a procedure.
+thisformset.form2.refresh
+Error in line 6495: Statement is not in a procedure.
+endif
+Error in line 6496: Statement is not in a procedure.
+ENDPROC
+Error in line 6499: Nesting error.
+PROCEDURE Form2.cmd_ok.Click
+Error in line 6500: Command contains unrecognized phrase/keyword.
+select &pfCursor
+Error in line 6501: Statement is not in a procedure.
+if recno() > 0
+Error in line 6502: Statement is not in a procedure.
+lcTgl = tgl_dft
+Error in line 6503: Statement is not in a procedure.
+lcNo = no_dft
+Error in line 6504: Statement is not in a procedure.
+select pkb_header
+Error in line 6506: Statement is not in a procedure.
+set order to daftar
+Error in line 6507: Statement is not in a procedure.
+seek(dtos(lcTgl)+lcNo)
+Error in line 6508: Statement is not in a procedure.
+if found()
+Error in line 6509: Statement is not in a procedure.
+endif
+Error in line 6511: Statement is not in a procedure.
+endif
+Error in line 6512: Statement is not in a procedure.
+ENDPROC
+Error in line 6515: Nesting error.
+PROCEDURE Form2.cmd_exit.Click
+Error in line 6516: Command contains unrecognized phrase/keyword.
+sformset2.form2.cmd_exit::click
+Error in line 6517: Statement is not in a procedure.
+ENDPROC
+Error in line 6520: Nesting error.
+PROCEDURE Form2.cmd_prev.Click
+Error in line 6521: Command contains unrecognized phrase/keyword.
+lcObject = thisformset.form2.container1
+Error in line 6522: Statement is not in a procedure.
+select &pfCursor
+Error in line 6524: Statement is not in a procedure.
+if !BOF()
+Error in line 6525: Statement is not in a procedure.
+skip -1
+Error in line 6526: Statement is not in a procedure.
+endif
+Error in line 6527: Statement is not in a procedure.
+lcObject.txtNopol1.value = substr(nopol,1,2)
+Error in line 6529: Statement is not in a procedure.
+lcObject.txtNopol2.value = substr(nopol,3,4)
+Error in line 6530: Statement is not in a procedure.
+lcObject.txtNopol3.value = substr(nopol,7,2)
+Error in line 6531: Statement is not in a procedure.
+lcObject.txtKohir.value = kohir
+Error in line 6532: Statement is not in a procedure.
+lcObject.txtjns.value = jenis
+Error in line 6533: Statement is not in a procedure.
+lcObject.txtKdMerk.value = kd_merk
+Error in line 6534: Statement is not in a procedure.
+lcObject.cmbTipe.value = tipe
+Error in line 6535: Statement is not in a procedure.
+lcObject.txtRangka.value = rangka
+Error in line 6536: Statement is not in a procedure.
+lcObject.txtMesin.value = mesin
+Error in line 6537: Statement is not in a procedure.
+lcObject.txtNo_Bpkb.value = no_bpkb
+Error in line 6538: Statement is not in a procedure.
+lcObject.txtNo_Dft.value = no_dft
+Error in line 6539: Statement is not in a procedure.
+lcObject.txtTgl_Dft.value = tgl_dft
+Error in line 6540: Statement is not in a procedure.
+lcObject.cmbJns_Dft.value = jns_dft1
+Error in line 6541: Statement is not in a procedure.
+select ajenis
+Error in line 6545: Statement is not in a procedure.
+seek(lcObject.txtjns.value)
+Error in line 6546: Statement is not in a procedure.
+if found()
+Error in line 6547: Statement is not in a procedure.
+lcObject.txtJenis.value = ket
+Error in line 6548: Statement is not in a procedure.
+lcObject.txtJenis.DisabledBackColor= 16776960
+Error in line 6549: Statement is not in a procedure.
+ELSE
+Error in line 6550: Statement is not in a procedure.
+lcObject.txtJenis.value = 'Jenis Kendaraan Tak Ada'
+Error in line 6552: Statement is not in a procedure.
+lcObject.txtJenis.DisabledBackColor= 8421631
+Error in line 6553: Statement is not in a procedure.
+endif
+Error in line 6554: Statement is not in a procedure.
+select msmerk
+Error in line 6557: Statement is not in a procedure.
+seek(lcObject.txtKdMerk.value)
+Error in line 6558: Statement is not in a procedure.
+if found()
+Error in line 6559: Statement is not in a procedure.
+lcObject.txtKd_Merk.value = ket
+Error in line 6560: Statement is not in a procedure.
+lcObject.txtKd_Merk.DisabledBackColor= 16776960
+Error in line 6561: Statement is not in a procedure.
+ELSE
+Error in line 6562: Statement is not in a procedure.
+lcObject.txtKd_Merk.value = 'Merk Kendaraan Tak Ada'
+Error in line 6564: Statement is not in a procedure.
+lcObject.txtKd_Merk.DisabledBackColor= 8421631
+Error in line 6565: Statement is not in a procedure.
+endif
+Error in line 6566: Statement is not in a procedure.
+select apkb
+Error in line 6569: Statement is not in a procedure.
+SET ORDER TO pkb
+Error in line 6570: Statement is not in a procedure.
+seek(lcObject.txtjns.value+lcObject.txtKdMerk.value+lcObject.cmbTipe.value)
+Error in line 6571: Statement is not in a procedure.
+if found()
+Error in line 6576: Statement is not in a procedure.
+lcObject.txtTipe.value = ket
+Error in line 6577: Statement is not in a procedure.
+lcObject.txtTipe.DisabledBackColor= 16776960
+Error in line 6578: Statement is not in a procedure.
+ELSE
+Error in line 6579: Statement is not in a procedure.
+lcObject.txtTipe.value = 'Tipe Kendaraan Tak Ada'
+Error in line 6581: Statement is not in a procedure.
+lcObject.txtTipe.DisabledBackColor= 8421631
+Error in line 6582: Statement is not in a procedure.
+endif
+Error in line 6583: Statement is not in a procedure.
+select ajpajak
+Error in line 6586: Statement is not in a procedure.
+seek(lcObject.cmbJns_Dft.value)
+Error in line 6587: Statement is not in a procedure.
+if found()
+Error in line 6588: Statement is not in a procedure.
+lcObject.txtJns_Dft.value = ket
+Error in line 6589: Statement is not in a procedure.
+endif
+Error in line 6590: Statement is not in a procedure.
+thisformset.form2.refresh
+Error in line 6592: Statement is not in a procedure.
+ENDPROC
+Error in line 6594: Nesting error.
+PROCEDURE Form2.cmd_next.Click
+Error in line 6595: Command contains unrecognized phrase/keyword.
+lcObject = thisformset.form2.container1
+Error in line 6596: Statement is not in a procedure.
+select &pfCursor
+Error in line 6598: Statement is not in a procedure.
+if !EOF()
+Error in line 6599: Statement is not in a procedure.
+skip
+Error in line 6600: Statement is not in a procedure.
+endif
+Error in line 6601: Statement is not in a procedure.
+if EOF() and !BOF()
+Error in line 6602: Statement is not in a procedure.
+skip -1
+Error in line 6603: Statement is not in a procedure.
+endif
+Error in line 6604: Statement is not in a procedure.
+lcObject.txtNopol1.value = substr(nopol,1,2)
+Error in line 6606: Statement is not in a procedure.
+lcObject.txtNopol2.value = substr(nopol,3,4)
+Error in line 6607: Statement is not in a procedure.
+lcObject.txtNopol3.value = substr(nopol,7,2)
+Error in line 6608: Statement is not in a procedure.
+lcObject.txtKohir.value = kohir
+Error in line 6609: Statement is not in a procedure.
+lcObject.txtjns.value = jenis
+Error in line 6610: Statement is not in a procedure.
+lcObject.txtKdMerk.value = kd_merk
+Error in line 6611: Statement is not in a procedure.
+lcObject.cmbTipe.value = tipe
+Error in line 6612: Statement is not in a procedure.
+lcObject.txtRangka.value = rangka
+Error in line 6613: Statement is not in a procedure.
+lcObject.txtMesin.value = mesin
+Error in line 6614: Statement is not in a procedure.
+lcObject.txtNo_Bpkb.value = no_bpkb
+Error in line 6615: Statement is not in a procedure.
+lcObject.txtNo_Dft.value = no_dft
+Error in line 6616: Statement is not in a procedure.
+lcObject.txtTgl_Dft.value = tgl_dft
+Error in line 6617: Statement is not in a procedure.
+lcObject.cmbJns_Dft.value = jns_dft1
+Error in line 6618: Statement is not in a procedure.
+select ajenis
+Error in line 6622: Statement is not in a procedure.
+seek(lcObject.txtjns.value)
+Error in line 6623: Statement is not in a procedure.
+if found()
+Error in line 6624: Statement is not in a procedure.
+lcObject.txtJenis.value = ket
+Error in line 6625: Statement is not in a procedure.
+lcObject.txtJenis.DisabledBackColor= 16776960
+Error in line 6626: Statement is not in a procedure.
+ELSE
+Error in line 6627: Statement is not in a procedure.
+lcObject.txtJenis.value = 'Jenis Kendaraan Tak Ada'
+Error in line 6629: Statement is not in a procedure.
+lcObject.txtJenis.DisabledBackColor= 8421631
+Error in line 6630: Statement is not in a procedure.
+endif
+Error in line 6631: Statement is not in a procedure.
+select msmerk
+Error in line 6634: Statement is not in a procedure.
+seek(lcObject.txtKdMerk.value)
+Error in line 6635: Statement is not in a procedure.
+if found()
+Error in line 6636: Statement is not in a procedure.
+lcObject.txtKd_Merk.value = ket
+Error in line 6637: Statement is not in a procedure.
+lcObject.txtKd_Merk.DisabledBackColor= 16776960
+Error in line 6638: Statement is not in a procedure.
+ELSE
+Error in line 6639: Statement is not in a procedure.
+lcObject.txtKd_Merk.value = 'Merk Kendaraan Tak Ada'
+Error in line 6641: Statement is not in a procedure.
+lcObject.txtKd_Merk.DisabledBackColor= 8421631
+Error in line 6642: Statement is not in a procedure.
+endif
+Error in line 6643: Statement is not in a procedure.
+select apkb
+Error in line 6646: Statement is not in a procedure.
+SET ORDER TO pkb
+Error in line 6647: Statement is not in a procedure.
+IF seek(lcObject.txtjns.value+lcObject.txtKdMerk.value+lcObject.cmbTipe.value)
+Error in line 6648: Statement is not in a procedure.
+lcObject.txtTipe.value = ket
+Error in line 6654: Statement is not in a procedure.
+lcObject.txtTipe.DisabledBackColor= 16776960
+Error in line 6655: Statement is not in a procedure.
+ELSE
+Error in line 6656: Statement is not in a procedure.
+lcObject.txtTipe.value = 'Tipe Kendaraan Tak Ada'
+Error in line 6658: Statement is not in a procedure.
+lcObject.txtTipe.DisabledBackColor= 8421631
+Error in line 6659: Statement is not in a procedure.
+endif
+Error in line 6660: Statement is not in a procedure.
+select ajpajak
+Error in line 6663: Statement is not in a procedure.
+seek(lcObject.cmbJns_Dft.value)
+Error in line 6664: Statement is not in a procedure.
+if found()
+Error in line 6665: Statement is not in a procedure.
+lcObject.txtJns_Dft.value = ket
+Error in line 6666: Statement is not in a procedure.
+endif
+Error in line 6667: Statement is not in a procedure.
+thisformset.form2.refresh
+Error in line 6669: Statement is not in a procedure.
+ENDPROC
+Error in line 6671: Nesting error.
+PROCEDURE Form2.Show
+Error in line 6672: Command contains unrecognized phrase/keyword.
+LPARAMETERS nStyle
+Error in line 6673: Statement is not in a procedure.
+this.container1.cmbKriteria.listindex = 1
+Error in line 6675: Statement is not in a procedure.
+ENDPROC
+Error in line 6677: Nesting error.
+PROCEDURE Form3.cmd_proses.Click
+Error in line 6678: Command contains unrecognized phrase/keyword.
+ckota = ALLTRIM(konfig.city)
+Error in line 6679: Statement is not in a procedure.
+ctgl = getdate(konfig.tgl_dft)
+Error in line 6680: Statement is not in a procedure.
+cnm = ALLTRIM(konfig.p_dft)
+Error in line 6681: Statement is not in a procedure.
+cnrp = ALLTRIM(konfig.nip_dft)
+Error in line 6682: Statement is not in a procedure.
+frm = ThisFormset.Form1.cntInput
+Error in line 6684: Statement is not in a procedure.
+If pldserver
+Error in line 6686: Statement is not in a procedure.
+Thisformset.cetak_akend_r
+Error in line 6687: Statement is not in a procedure.
+ELSE
+Error in line 6688: Statement is not in a procedure.
+cno_dft = ALLT(frm.txtNo_dft.Value)
+Error in line 6690: Statement is not in a procedure.
+dtgl_dft = frm.txttgl_Dft.Value  
+Error in line 6691: Statement is not in a procedure.
+cnopol = Allt(frm.txtNopol1.Value)+Allt(frm.txtNopol2.Value)+Allt(frm.txtNopol3.Value)
+Error in line 6692: Statement is not in a procedure.
+cSql = "select * from pkb_header where no_dft=?cno_dft and tgl_dft=?dtgl_dft ORDER BY tgl_dft DESC, no_dft DESC"
+Error in line 6694: Statement is not in a procedure.
+SQLExec(gnconnhandle, cSql , "list_kend")
+Error in line 6695: Statement is not in a procedure.
+cnopol = list_kend.nopol
+Error in line 6697: Statement is not in a procedure.
+lfCursor = Sys(2015)
+Error in line 6698: Statement is not in a procedure.
+Create Cursor &lfCursor (nama c(50), milik c(30), ktp c(35), alamat c(100),  nopol c(15), merk c(30), tipe c(30), jenis c(30), model c(35), thn_buat c(4), cyl c(10), warna c(15),  rangka c(35), mesin c(35),tnkb c(15), bpkb c(35), lokasi c(30), guna c(50),	bbm c(2), asal c(50))
+Error in line 6702: Statement is not in a procedure.
+ckdmerk = ALLTRIM(list_kend.kd_merk)
+Error in line 6704: Statement is not in a procedure.
+csmerk = 'select * from msmerk where kd_merk = ?ckdmerk'
+Error in line 6705: Statement is not in a procedure.
+asg = SQLEXEC(gnconnhandle,csmerk,'cs_merk')
+Error in line 6706: Statement is not in a procedure.
+IF asg <0
+Error in line 6707: Statement is not in a procedure.
+=Messagebox('error get merk')
+Error in line 6708: Statement is not in a procedure.
+ELSE
+Error in line 6709: Statement is not in a procedure.
+casal = ALLTRIM(cs_merk.neg_asal)
+Error in line 6710: Statement is not in a procedure.
+ENDIF
+Error in line 6711: Statement is not in a procedure.
+cjenis=Alltrim(list_kend.jenis)
+Error in line 6713: Statement is not in a procedure.
+lcmodel=''
+Error in line 6714: Statement is not in a procedure.
+csq = "select general from ajenis where jenis = ?cjenis "
+Error in line 6715: Statement is not in a procedure.
+asg = SQLExec(gnconnhandle,csq	,'cs_gen')
+Error in line 6717: Statement is not in a procedure.
+If asg<0
+Error in line 6718: Statement is not in a procedure.
+=Messagebox('error get jenis')
+Error in line 6719: Statement is not in a procedure.
+Else
+Error in line 6721: Statement is not in a procedure.
+If !Isnull(General)
+Error in line 6722: Statement is not in a procedure.
+cgen = Alltrim(General)
+Error in line 6723: Statement is not in a procedure.
+csq = "select ket from ajenis where jenis = ?cgen "
+Error in line 6724: Statement is not in a procedure.
+asg = SQLExec(gnconnhandle,csq	,'cs_gen')
+Error in line 6725: Statement is not in a procedure.
+If asg<0
+Error in line 6726: Statement is not in a procedure.
+=Messagebox('error get general')
+Error in line 6727: Statement is not in a procedure.
+Else
+Error in line 6728: Statement is not in a procedure.
+If !Isnull(ket)
+Error in line 6729: Statement is not in a procedure.
+lcmodel = ket
+Error in line 6730: Statement is not in a procedure.
+Endif
+Error in line 6731: Statement is not in a procedure.
+Endif
+Error in line 6732: Statement is not in a procedure.
+Endif
+Error in line 6733: Statement is not in a procedure.
+Endif
+Error in line 6734: Statement is not in a procedure.
+lcMilik=Iif(!Isnull(frm.txtMilik.Value),frm.txtMilik.Value,'')
+Error in line 6736: Statement is not in a procedure.
+lcmerk = Iif(!Isnull(frm.txtmerk.Value),frm.txtmerk.Value,'')
+Error in line 6737: Statement is not in a procedure.
+lcTipe = Iif(!Isnull(frm.txtTipe.Value),frm.txtTipe.Value,'')
+Error in line 6738: Statement is not in a procedure.
+lcjenis = Iif(!Isnull(frm.txtJenis.Value),frm.txtJenis.Value,'')
+Error in line 6739: Statement is not in a procedure.
+lcguna=Iif(!Isnull(frm.txtpenggunaan.Value),frm.txtpenggunaan.Value,'')
+Error in line 6740: Statement is not in a procedure.
+lcCyl = Iif(!Isnull(frm.txtCC.Value),ALLTRIM(STR(frm.txtCC.Value))+' CC','')
+Error in line 6741: Statement is not in a procedure.
+lcalamat = Iif(!Isnull(frm.txtAlamat.Value),frm.txtAlamat.Value,'')
+Error in line 6742: Statement is not in a procedure.
+lcbbm=list_kend.kd_bbm
+Error in line 6744: Statement is not in a procedure.
+ckd_upt =pckdupt
+Error in line 6745: Statement is not in a procedure.
+If Thisform.opt_media.Value = 2
+Error in line 6748: Statement is not in a procedure.
+csq = "update akend set sppkb= 1 where nopol=?cnopol"
+Error in line 6750: Statement is not in a procedure.
+asg = SQLExec(gnconnhandle,csq)
+Error in line 6751: Statement is not in a procedure.
+If asg<0
+Error in line 6752: Statement is not in a procedure.
+=Messagebox('error Update akend jenis')
+Error in line 6753: Statement is not in a procedure.
+Endif
+Error in line 6754: Statement is not in a procedure.
+Endif
+Error in line 6756: Statement is not in a procedure.
+If Thisform.opt_media.Value = 2
+Error in line 6758: Statement is not in a procedure.
+csq = "update pkb_header set ctk_sppkb= 1 where nopol = ?cnopol "
+Error in line 6760: Statement is not in a procedure.
+asg = SQLExec(gnconnhandle,csq)
+Error in line 6761: Statement is not in a procedure.
+If asg<0
+Error in line 6762: Statement is not in a procedure.
+=Messagebox('error Update pkb_header jenis')
+Error in line 6763: Statement is not in a procedure.
+Endif
+Error in line 6764: Statement is not in a procedure.
+Endif
+Error in line 6766: Statement is not in a procedure.
+Select &lfCursor
+Error in line 6768: Statement is not in a procedure.
+Append Blank
+Error in line 6769: Statement is not in a procedure.
+Replace nama With list_kend.nama, milik With lcMilik, ktp With Iif(!Isnull(list_kend.ktp),list_kend.ktp,''), alamat With lcalamat,  nopol With list_kend.nopol, merk With lcmerk, tipe With lcTipe, jenis With lcjenis, model With lcModel, thn_buat With Iif(!Isnull(list_kend.thn_buat),list_kend.thn_buat,''),  cyl With lcCyl, warna With Iif(!Isnull(list_kend.warna),list_kend.warna,''), rangka With Iif(!Isnull(list_kend.rangka),list_kend.rangka,''),  mesin With Iif(!Isnull(list_kend.mesin),list_kend.mesin,''), tnkb With Iif(!Isnull(list_kend.warna_plat),list_kend.warna_plat,''),  bpkb With Iif(!Isnull(list_kend.no_bpkb),list_kend.no_bpkb,''), lokasi With '', guna With lcguna, bbm With lcBbm, asal WITH casal
+Error in line 6774: Statement is not in a procedure.
+Set Mark To '-'
+Error in line 6777: Statement is not in a procedure.
+Select &lfCursor
+Error in line 6779: Statement is not in a procedure.
+lcReport = 'reports\SPPKB.frx'
+Error in line 6780: Statement is not in a procedure.
+lcTextFile = 'text\SPPKB.Txt'
+Error in line 6781: Statement is not in a procedure.
+Do Case
+Error in line 6783: Statement is not in a procedure.
+Case Thisform.opt_media.Value = 1
+Error in line 6784: Statement is not in a procedure.
+Report Form &lcReport Preview
+Error in line 6785: Statement is not in a procedure.
+Case Thisform.opt_media.Value = 2
+Error in line 6786: Statement is not in a procedure.
+Report Form &lcReport To Printer Noconsole
+Error in line 6787: Statement is not in a procedure.
+Case Thisform.opt_media.Value = 3
+Error in line 6788: Statement is not in a procedure.
+Report Form &lcReport To File (lcTextFile) Ascii
+Error in line 6789: Statement is not in a procedure.
+SET HEADINGS off
+Error in line 6790: Statement is not in a procedure.
+TYPE &lctextfile To Printer 
+Error in line 6791: Statement is not in a procedure.
+ENDCASE
+Error in line 6792: Statement is not in a procedure.
+Set Mark To
+Error in line 6794: Statement is not in a procedure.
+thisformset.form3.Hide
+Error in line 6797: Statement is not in a procedure.
+thisformset.form1.Enabled = .T. 
+Error in line 6798: Statement is not in a procedure.
+Endif
+Error in line 6800: Statement is not in a procedure.
+ENDPROC
+Error in line 6802: Nesting error.
+PROCEDURE Form3.cmd_batal.Click
+Error in line 6803: Command contains unrecognized phrase/keyword.
+sformset2.form3.cmd_batal::click
+Error in line 6804: Statement is not in a procedure.
+ENDPROC
+Error in line 6807: Nesting error.
+PROCEDURE Form3.Activate
+Error in line 6808: Command contains unrecognized phrase/keyword.
+THIS.COntainer1.TXTNopol1.Value = ThisFormset.Form1.Container1.txtNopol1.value
+Error in line 6809: Statement is not in a procedure.
+THIS.COntainer1.TXTNopol2.Value = ThisFormset.Form1.Container1.txtNopol2.value
+Error in line 6810: Statement is not in a procedure.
+THIS.COntainer1.TXTNopol3.Value = ThisFormset.Form1.Container1.txtNopol3.value
+Error in line 6811: Statement is not in a procedure.
+ENDPROC
+Error in line 6812: Nesting error.
+ýùáþ
+Error in line 6815: Unrecognized command verb.
+ýùþ$
+Error in line 6818: Unrecognized command verb.
+ò	
+Error in line 6820: Unrecognized command verb.
+ò	
+Error in line 6822: Unrecognized command verb.
+ýùbþ$
+Error in line 6825: Unrecognized command verb.
+ò	
+Error in line 6826: Unrecognized command verb.
+ò	
+Error in line 6827: Unrecognized command verb.
+ýù€þ0
+Error in line 6830: Unrecognized command verb.
+ò	
+Error in line 6831: Unrecognized command verb.
+ýùøþ0
+Error in line 6835: Unrecognized command verb.
+ò	
+Error in line 6836: Unrecognized command verb.
+ýùÃþ8
+Error in line 6837: Unrecognized command verb.
+ýùþ8
+Error in line 6838: Unrecognized command verb.
+ýùHþ8
+Error in line 6839: Unrecognized command verb.
+ýùcþ
+Error in line 6841: Unrecognized command verb.
+ýùg	þ
+Error in line 6843: Unrecognized command verb.
+ýù
+Error in line 6844: Unrecognized command verb.
+þ8
+Error in line 6845: Unrecognized command verb.
+þ9
+Error in line 6846: Unrecognized command verb.
+ýùgþ
+Error in line 6847: Unrecognized command verb.
+þ
+Error in line 6848: Unrecognized command verb.
+ýùÌþ
+Error in line 6863: Unrecognized command verb.
+
+Error in line 6864: Unrecognized command verb.
+ýùäþ
+Error in line 6873: Unrecognized command verb.
+
+Error in line 6874: Unrecognized command verb.
+ýùÐ
+Error in line 6881: Unrecognized command verb.
+ýùPþ
+Error in line 6883: Unrecognized command verb.
+÷
+Error in line 6885: Unrecognized command verb.
+ýùFþ
+Error in line 6887: Unrecognized command verb.
+÷
+Error in line 6889: Unrecognized command verb.
+ýù¨þ
+Error in line 6891: Unrecognized command verb.
+ýùúþ*
+Error in line 6894: Unrecognized command verb.
+ýùmþ<
+Error in line 6897: Unrecognized command verb.
+ñ
+Error in line 6908: Unrecognized command verb.
+ýùþ
+Error in line 6909: Unrecognized command verb.
+ò	
+Error in line 6911: Unrecognized command verb.
+ýùÀþd
+Error in line 6928: Unrecognized command verb.
+û
+Error in line 6929: Unrecognized command verb.
+
+Error in line 6939: Unrecognized command verb.
+ò
+Error in line 6954: Unrecognized command verb.
+ò
+Error in line 6962: Unrecognized command verb.
+ò
+Error in line 6971: Unrecognized command verb.
+ò
+Error in line 6972: Unrecognized command verb.
+ò
+Error in line 6974: Unrecognized command verb.
+ò
+Error in line 6975: Unrecognized command verb.
+ò
+Error in line 6976: Unrecognized command verb.
+ò
+Error in line 6977: Unrecognized command verb.
+ò
+Error in line 6979: Unrecognized command verb.
+ò
+Error in line 6980: Unrecognized command verb.
+ò
+Error in line 6981: Unrecognized command verb.
+ò
+Error in line 6982: Unrecognized command verb.
+ò
+Error in line 6984: Unrecognized command verb.
+ò
+Error in line 6986: Unrecognized command verb.
+ò
+Error in line 6988: Unrecognized command verb.
+ò
+Error in line 6990: Unrecognized command verb.
+ò
+Error in line 6991: Unrecognized command verb.
+ò
+Error in line 6992: Unrecognized command verb.
+ò
+Error in line 6994: Unrecognized command verb.
+ò
+Error in line 6995: Unrecognized command verb.
+ò
+Error in line 6997: Unrecognized command verb.
+ò
+Error in line 6998: Unrecognized command verb.
+ýùH
+Error in line 6999: Unrecognized command verb.
+þ
+Error in line 7000: Unrecognized command verb.
+þ
+Error in line 7001: Unrecognized command verb.
+ýù(þ@
+Error in line 7002: Unrecognized command verb.
+þ
+Error in line 7006: Unrecognized command verb.
+þ*
+Error in line 7007: Unrecognized command verb.
+ò	
+Error in line 7008: Unrecognized command verb.
+ùuþ'
+Error in line 7011: Unrecognized command verb.
+ð
+Error in line 7012: Unrecognized command verb.
+ýù1
+Error in line 7013: Unrecognized command verb.
+þ
+Error in line 7014: Unrecognized command verb.
+ýùþ0
+Error in line 7015: Unrecognized command verb.
+ýùµþ
+Error in line 7017: Unrecognized command verb.
+
+Error in line 7021: Unrecognized command verb.
+
+Error in line 7022: Unrecognized command verb.
+
+Error in line 7023: Unrecognized command verb.
+ýù±þR
+Error in line 7024: Unrecognized command verb.
+ýùþ2
+Error in line 7026: Unrecognized command verb.
+þ
+Error in line 7028: Unrecognized command verb.
+þ
+Error in line 7029: Unrecognized command verb.
+ýù%
+Error in line 7030: Unrecognized command verb.
+þ
+Error in line 7031: Unrecognized command verb.
+
+Error in line 7035: Unrecognized command verb.
+
+Error in line 7036: Unrecognized command verb.
+
+Error in line 7037: Unrecognized command verb.
+ýù!
+Error in line 7038: Unrecognized command verb.
+þR
+Error in line 7039: Unrecognized command verb.
+þ>
+Error in line 7041: Unrecognized command verb.
+þ
+Error in line 7042: Unrecognized command verb.
+ñ
+Error in line 7105: Unrecognized command verb.
+ýù†þ
+Error in line 7106: Unrecognized command verb.
+ýù°þ
+Error in line 7121: Unrecognized command verb.
+ýù|þ
+Error in line 7140: Unrecognized command verb.
+ýù$þ
+Error in line 7149: Unrecognized command verb.
+ýùÃþ
+Error in line 7153: Unrecognized command verb.
+þ
+Error in line 7166: Unrecognized command verb.
+ýù,
+Error in line 7168: Unrecognized command verb.
+þ
+Error in line 7169: Unrecognized command verb.
+ù‚Iþ<
+Error in line 7172: Unrecognized command verb.
+þ
+Error in line 7173: Unrecognized command verb.
+þ
+Error in line 7182: Unrecognized command verb.
+þ
+Error in line 7184: Unrecognized command verb.
+þ
+Error in line 7186: Unrecognized command verb.
+þ
+Error in line 7230: Unrecognized command verb.
+þ
+Error in line 7232: Unrecognized command verb.
+þ
+Error in line 7234: Unrecognized command verb.
+þ
+Error in line 7236: Unrecognized command verb.
+þ
+Error in line 7248: Unrecognized command verb.
+þ
+Error in line 7256: Unrecognized command verb.
+"þ
+Error in line 7264: Unrecognized command verb.
+$þ
+Error in line 7272: Unrecognized command verb.
+ò
+Error in line 7416: Unrecognized command verb.
+ò
+Error in line 7417: Unrecognized command verb.
+ò
+Error in line 7422: Unrecognized command verb.
+ò
+Error in line 7426: Unrecognized command verb.
+ò
+Error in line 7427: Unrecognized command verb.
+ò
+Error in line 7429: Unrecognized command verb.
+ò
+Error in line 7445: Unrecognized command verb.
+ò
+Error in line 7468: Unrecognized command verb.
+ò	
+Error in line 7478: Unrecognized command verb.
+ò
+Error in line 7479: Unrecognized command verb.
+ò
+Error in line 7480: Unrecognized command verb.
+ò
+Error in line 7481: Unrecognized command verb.
+ò
+Error in line 7482: Unrecognized command verb.
+þ
+Error in line 7494: Unrecognized command verb.
+þb
+Error in line 7495: Unrecognized command verb.
+ò	
+Error in line 7528: Unrecognized command verb.
+ò	
+Error in line 7529: Unrecognized command verb.
+ýù(þ1
+Error in line 7532: Unrecognized command verb.
+þ
+Error in line 7533: Unrecognized command verb.
+ò	
+Error in line 7539: Unrecognized command verb.
+ýù_þ+
+Error in line 7541: Unrecognized command verb.
+þ
+Error in line 7543: Unrecognized command verb.
+ò	
+Error in line 7547: Unrecognized command verb.
+ýùa
+Error in line 7549: Unrecognized command verb.
+þ*
+Error in line 7550: Unrecognized command verb.
+þ
+Error in line 7551: Unrecognized command verb.
+ò
+Error in line 7553: Unrecognized command verb.
+ò
+Error in line 7554: Unrecognized command verb.
+þ
+Error in line 7557: Unrecognized command verb.
+þ
+Error in line 7559: Unrecognized command verb.
+ýùþ
+Error in line 7572: Unrecognized command verb.
+ýù¿þ
+Error in line 7574: Unrecognized command verb.
+þ@
+Error in line 7599: Unrecognized command verb.
+þ@
+Error in line 7600: Unrecognized command verb.
+þ)
+Error in line 7601: Unrecognized command verb.
+\ý@üû
+Error in line 7604: Statement is not in a procedure.
+\ý@üû
+Error in line 7607: Statement is not in a procedure.
+\ý@üû
+Error in line 7611: Statement is not in a procedure.
+ýþG
+Error in line 7622: Unrecognized command verb.
+ýþ
+Error in line 7624: Unrecognized command verb.
+þ
+Error in line 7628: Unrecognized command verb.

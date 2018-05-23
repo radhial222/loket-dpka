@@ -1,0 +1,193 @@
+Visual Class Library e:\...\libs\con_mysql.vcx has the following errors:
+    Menu MNU_SVR - Undefined
+    Form FRM_INFO - Undefined
+
+Visual Class Library e:\...\libs\libsbase.vcx has the following errors:
+    Unknown ISTAG - Undefined
+    Unknown FORMISOBJECT - Undefined
+    Unknown GETPRIVSTR - Undefined
+    Unknown WRITEPRIVSTR - Undefined
+    Menu WINDOW - Undefined
+    Unknown MSGBOX - Undefined
+
+Report e:\...\reports\rpt_b1.frx has the following errors:
+    Unknown PKBWP - Undefined
+    Unknown PKBRP - Undefined
+    Unknown BN1WP - Undefined
+    Unknown BN2WP - Undefined
+    Unknown BN1RP - Undefined
+    Unknown BN2RP - Undefined
+
+Report e:\...\reports\rpt_b4.frx has the following errors:
+    Unknown D - Undefined
+    Unknown C - Undefined
+    Unknown A - Undefined
+    Unknown B - Undefined
+
+Report e:\...\reports\rpt_b5.frx has the following errors:
+    Unknown D - Undefined
+    Unknown C - Undefined
+    Unknown A - Undefined
+    Unknown B - Undefined
+    Unknown KB - Undefined
+    Unknown JA - Undefined
+    Unknown JB - Undefined
+    Unknown TA - Undefined
+    Unknown TB - Undefined
+    Unknown JC - Undefined
+    Unknown TC - Undefined
+    Unknown JD - Undefined
+    Unknown TD - Undefined
+    Unknown E - Undefined
+    Unknown F - Undefined
+    Unknown JE - Undefined
+    Unknown JF - Undefined
+    Unknown TE - Undefined
+    Unknown TF - Undefined
+    Unknown G - Undefined
+    Unknown JG - Undefined
+    Unknown TG - Undefined
+
+Report e:\...\reports\rpt_b6.frx has the following errors:
+    Unknown D - Undefined
+    Unknown C - Undefined
+    Unknown A - Undefined
+    Unknown B - Undefined
+    Unknown B2 - Undefined
+    Unknown C2 - Undefined
+    Unknown A2 - Undefined
+
+Report e:\...\reports\rpt_b2.frx has the following errors:
+    Unknown WP1 - Undefined
+    Unknown RP1 - Undefined
+    Unknown NJML - Undefined
+    Unknown WP2 - Undefined
+    Unknown RP2 - Undefined
+    Unknown WP3 - Undefined
+    Unknown RP3 - Undefined
+    Unknown WP4 - Undefined
+    Unknown RP4 - Undefined
+
+Report e:\...\reports\sket_fiskal_ambon.frx has the following errors:
+    File PROP_SULTENG.JPG - Undefined
+
+Visual Class Library e:\...\libs\andha.vcx has the following errors:
+    File PINELUMB.JPG - Undefined
+    Unknown KONEK - Undefined
+    Unknown EKSEKUSI - Undefined
+    Unknown CETAK_EXCEL - Undefined
+    Unknown CETAK_DOC - Undefined
+    Unknown CETAK_PDF - Undefined
+    Unknown BUKA_APP - Undefined
+    Unknown CEK_DATABASE - Undefined
+    Unknown KON - Undefined
+    Unknown APP_STATUS - Undefined
+    Unknown NOL - Undefined
+    File EXCEL_CTK.BMP - Undefined
+    File WORD_CTK.BMP - Undefined
+    File PDF_CTK.BMP - Undefined
+
+Form e:\...\forms\daftar_kbaru.scx has the following errors:
+    Form KENDARAAN_DAFTAR_KBARU - Undefined
+
+Form e:\...\forms\tetap_hitung_cb.scx has the following errors:
+    Form REKAP_HARTETAP - Undefined
+
+Form e:\...\forms\tetap_hitung_info.scx has the following errors:
+    Form REKAP_HARTETAP - Undefined
+
+Form e:\...\forms\tetap_notice_ctk.scx has the following errors:
+    Form REKAP_HARTETAP - Undefined
+
+Form e:\...\forms\lap_trm_harian_rinci_palu_cek.scx has the following errors:
+    Report TERIMA_BANK_HARIAN_CEK - Undefined
+
+Form e:\...\forms\cek_lokasi.scx has the following errors:
+    Report CEK_LOKASI - Undefined
+
+Form e:\...\forms\lap_sms02_palu_cek_lokasi.scx has the following errors:
+    Report SMS_PERWILAYAH - Undefined
+
+Form e:\...\forms\lap_sts_ar_palu.scx has the following errors:
+    Report LAP_STS_SP3_PALU - Undefined
+
+Form e:\...\forms\terima_baru_validasi.scx has the following errors:
+    Form LAP_TRM_HARIAN_BANK - Undefined
+    Form LAP_TRM_AYAT_BANK - Undefined
+    Form LAP_TRM_HARIAN_REV - Undefined
+    Form REKAP_TERIMA_NEW - Undefined
+    Form HKASIR_REV - Undefined
+    Form LAP_STS - Undefined
+
+Form e:\...\forms\tetap_hitung_keliling.scx has the following errors:
+    Form REKAP_HARTETAP - Undefined
+
+Form e:\...\forms\tetap_notice_ctk_edit.scx has the following errors:
+    Form REKAP_HARTETAP - Undefined
+
+Form e:\...\forms\terima_baru_validasi_spv.scx has the following errors:
+    Form LAP_TRM_HARIAN_BANK - Undefined
+    Form LAP_TRM_AYAT_BANK - Undefined
+    Form LAP_TRM_HARIAN_REV - Undefined
+    Form REKAP_TERIMA_NEW - Undefined
+    Form HKASIR_REV - Undefined
+    Form LAP_STS - Undefined
+
+Form e:\...\forms\tetap_notice_ctk_duplikat.scx has the following errors:
+    Form REKAP_HARTETAP - Undefined
+
+Form e:\...\forms\tetap_notice_ctk_daftap.scx has the following errors:
+    Form REKAP_HARTETAP - Undefined
+
+Form e:\...\forms\tetap_notice_ctk_daftap_baru.scx has the following errors:
+    Form REKAP_HARTETAP - Undefined
+
+Form e:\...\forms\tetap_notice_ctk_daftap_online.scx has the following errors:
+    Form REKAP_HARTETAP - Undefined
+
+Form e:\...\forms\tetap_notice_ctk_daftap_mutasi.scx has the following errors:
+    Form REKAP_HARTETAP - Undefined
+
+Form e:\...\forms\tetap_hitung_info_apkb_lama.scx has the following errors:
+    Form REKAP_HARTETAP - Undefined
+
+Form e:\...\forms\transfer_download.scx has the following errors:
+    Unknown SQL_DATA - Undefined
+    File IMPOR.BMP - Undefined
+    File RUN1.PNG - Undefined
+
+Form e:\...\forms\tetap_notice_ctk_kohir.scx has the following errors:
+    Form REKAP_HARTETAP - Undefined
+
+Form e:\...\forms\tetap_notice_ctk_daftap_baru_polisi.scx has the following errors:
+    Form REKAP_HARTETAP - Undefined
+
+Form e:\...\forms\tetap_notice_ctk_daftap_polisi.scx has the following errors:
+    Form REKAP_HARTETAP - Undefined
+
+Form e:\...\forms\terima_baru_cetak.scx has the following errors:
+    Form LAP_TRM_HARIAN_REV - Undefined
+    Form REKAP_TERIMA - Undefined
+    Form HR-CTKNOTICE - Undefined
+
+Form e:\...\forms\tetap_notice_pengurangan.scx has the following errors:
+    Form REKAP_HARTETAP - Undefined
+
+Form e:\...\forms\tetap_notice_ctk_backup_ok.scx has the following errors:
+    Form REKAP_HARTETAP - Undefined
+
+Form e:\...\forms\terima_baru_cetak_ok.scx has the following errors:
+    Form LAP_TRM_HARIAN_REV - Undefined
+    Form REKAP_TERIMA - Undefined
+    Form HR-CTKNOTICE - Undefined
+
+Form e:\...\forms\frm_pesan.scx has the following errors:
+    Form LAPORAN_HARIAN_STNKKAB - Undefined
+    Form CETAKSTNKKAB - Undefined
+
+Form e:\...\forms\tetap_notice_ctk_cek.scx has the following errors:
+    Form REKAP_HARTETAP - Undefined
+
+Form e:\...\forms\tetap_notice_ctk_cek2.scx has the following errors:
+    Form REKAP_HARTETAP - Undefined
+
